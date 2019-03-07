@@ -1,0 +1,179 @@
+[
+	{
+		"name": "Stashfin",
+		"description": "StashFin app allows users to enter a few pieces of information, pick a personal loan that fits individual’s budget, and see their progress with the same every month.",
+		"imageFolder": "Stashfin",
+		"type": [
+			{
+				"name": "Mobile App",
+				"icon": "mobile-phone"
+			},
+			{
+				"name": "Web App",
+				"icon": "application"
+			}
+		],
+		"mobileFrontend": "Android, iOS",
+		"mobileBackend": "Code igniter",
+		"websiteFrontend": "React.js",
+		"websiteBackend": "Code igniter",
+		"database": "MySQL",
+		"infra": "AWS Elastic Beanstalk, S3"
+	},
+	{
+		"name": "Janab",
+		"description": "Janab is a personal assistance mobile application for lawyers, which help lawyers to organize their court cases, clients, matters, meetings and billings.",
+		"imageFolder": "Janab",
+		"type": [
+			{
+				"name": "Mobile App",
+				"icon": "mobile-phone"
+			}
+		],
+		"mobileFrontend": "Ionic2",
+		"mobileBackend": "Firebase Backend as a service",
+		"websiteFrontend": "NA",
+		"websiteBackend": "NA",
+		"database": "Firebase Realtime Database",
+		"infra": "Google Cloud Platform"
+	},
+	{
+		"name": "Joye",
+		"description": "Joye is a AI bot which connects with people to enhance their mood. If someone is happy, they can share their happiness with the world or if someone is stressed, they can use stress buster application like colouring app, meditation etc.",
+		"imageFolder": "Njoy",
+		"type": [
+			{
+				"name": "Mobile App",
+				"icon": "mobile-phone"
+			},
+			{
+				"name": "Web App",
+				"icon": "application"
+			}
+		],
+		"mobileFrontend": "iOS",
+		"mobileBackend": "DialogFlow for NLP",
+		"websiteFrontend": "Angular",
+		"websiteBackend": "NA",
+		"database": "Firebase Realtime Database",
+		"infra": "Google Cloud Platform"
+	},
+	{
+		"name": "FBM",
+		"description": "FBM mobile app helps to manage, automate and track the sales & distribution supply chain for all types of Food/ FMCG and their post-production system including orders, inventory, sales, financials, CRM, augmentation of intelligent MIS reports, logistics, claims and real time tracking of their sales force personnel.",
+		"imageFolder": "FBM",
+		"type": [
+			{
+				"name": "Mobile App",
+				"icon": "mobile-phone"
+			},
+			{
+				"name": "Web App",
+				"icon": "application"
+			}
+		],
+		"mobileFrontend": "Android",
+		"mobileBackend": "Node.js, Express.js",
+		"websiteFrontend": "Angular",
+		"websiteBackend": "Node.js, Express.js",
+		"database": "MySQL",
+		"infra": "Microservices Deployed to AWS ECS"
+	},
+	{
+		"name": "BrainyFied",
+		"description": "BrainyFied is a platform for people in software industry to ask real life problems, learn best practices from IT experts, strategies from business leaders & latest technology.",
+		"imageFolder": "Brainyfied",
+		"type": [
+			{
+				"name": "Web App",
+				"icon": "application"
+			}
+		],
+		"mobileFrontend": "NA",
+		"mobileBackend": "NA",
+		"websiteFrontend": "React.js",
+		"websiteBackend": "Node.js, Express.js",
+		"database": "Postgres + Mongo",
+		"infra": "AWS EC2"
+	},
+	{
+		"name": "FranchiseSoft",
+		"description": "FranchiseSoft is a franchise management enterprise software to help Franchise & their Franchisees increase sales, reach higher customer and franchisee satisfaction levels, with full reporting and visibility for Franchisor and Franchisee management.",
+		"imageFolder": "FranchiseSoft",
+		"type": [
+			{
+				"name": "Mobile App",
+				"icon": "mobile-phone"
+			},
+			{
+				"name": "Web App",
+				"icon": "application"
+			}
+		],
+		"mobileFrontend": "Android, iOS",
+		"mobileBackend": "Node JS, Express JS",
+		"websiteFrontend": "React.js",
+		"websiteBackend": "Node.js, Express.js",
+		"database": "MySQL, Googledatastore",
+		"infra": "AWS Elasticbeanstalk"
+	},
+	{
+		"name": "Ezee Salon",
+		"description": "Ezee Salon app allows users to buy & redeem deals, browse & book nearby salons, book a beautician to provide home service.",
+		"imageFolder": "Ezee",
+		"type": [
+			{
+				"name": "Mobile App",
+				"icon": "mobile-phone"
+			},
+			{
+				"name": "Web App",
+				"icon": "application"
+			}
+		],
+		"mobileFrontend": "Android, iOS",
+		"mobileBackend": "Node JS, Express JS",
+		"websiteFrontend": "Angular 6",
+		"websiteBackend": "Node.js, Express.js",
+		"database": "Postgres",
+		"infra": "AWS Elasticbeanstalk"
+	},
+	{
+		"name": "Pillion",
+		"description": "Pillion is a two-wheeler electric taxi service which helps city commuters to avail the advantage of switching over to zero polluting Electric Mobility. Pillion helps commuters to reach last mile destinations from any public point, such as a metro station or a busy bus terminal.",
+		"imageFolder": "Pillion",
+		"type": [
+			{
+				"name": "Mobile App",
+				"icon": "mobile-phone"
+			},
+			{
+				"name": "Web App",
+				"icon": "application"
+			}
+		],
+		"mobileFrontend": "Android",
+		"mobileBackend": "Laravel",
+		"websiteFrontend": "Bootstrap",
+		"websiteBackend": "Laravel",
+		"database": "MySQL",
+		"infra": "AWS Elasticbeanstalk"
+	},
+	{
+		"name": "Titan HST",
+		"description": "Titan HST is a comprehensive emergency alert system & mass notifications system, suitable for businesses, governments and schools. It allows administrators, organizational users and emergency personnel to communicate emergency information.",
+		"imageFolder": "TitanHST",
+		"type": [
+			{
+				"name": "Mobile App",
+				"icon": "mobile-phone"
+			}
+		],
+		"mobileFrontend": "Android, iOS",
+		"mobileBackend": "Java",
+		"websiteFrontend": "NA",
+		"websiteBackend": "NA",
+		"database": "MySQL",
+		"infra": "AWS Elasticbeanstalk"
+	}
+]

@@ -1,0 +1,89 @@
+.rcw-conversation-container {
+    margin: 0px 0px 160px 0px;
+    max-width: 300px;
+    max-height: 400px;
+}
+.rcw-conversation-container > .rcw-header {
+    background-color: #47B881;
+    height: 10px;
+}
+
+.rcw-conversation-container .rcw-title {
+    font-size: 16px;
+    margin: 0;
+    padding: 0px 12px;
+    text-align: left;
+}
+
+.rcw-conversation-container > .rcw-messages-container {
+    height: 45vh;
+}
+.rcw-conversation-container > .rcw-messages-container > .rcw-message > .rcw-response {
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 13px;
+    font-family: "SF UI Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.rcw-conversation-container > .rcw-messages-container > .rcw-message > .rcw-client {
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 13px;
+    font-family: "SF UI Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    background-color: #F1FAF5;
+}
+
+
+.rcw-widget-container > .rcw-launcher {
+    background-color: #47B881;
+    /* height: 50px; */
+    /* width: 50px; */
+}
+.rcw-widget-container > .rcw-launcher > .rcw-open-launcher {
+    /* margin-top: 9px; */
+}
+
+.rcw-widget-container > .rcw-launcher > .rcw-close-launcher {
+    /* margin-top: 15px; */
+}
+
+.rcw-conversation-container > .rcw-sender > .rcw-send {
+    height: 25px;
+}
+
+.rcw-conversation-container > .rcw-sender {
+    box-shadow: 0 2px 10px 1px #b5b5b5;
+}
+
+.rcw-conversation-container > .rcw-sender > .rcw-new-message {
+    font-family: "SF UI Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 13px;   
+}
+
+#button-pane {
+    position: fixed;
+    bottom: 70px;
+    right: 50px;
+    max-height: 30px;
+    max-width: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#button-pane > button {
+    margin-bottom: 25px;
+}
+
+#button-pane > button > svg {
+    fill: #47B881 !important;
+}
+
+.notification-pill {
+    z-index: 1;
+    /* margin-bottom: 1px; */
+    position: absolute;
+    bottom: 50px;
+    right: 0px;
+}

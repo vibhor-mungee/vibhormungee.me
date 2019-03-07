@@ -1,0 +1,148 @@
+[
+    {
+        "title": "CTO as a Service",
+        "subtitle": "Are you a startup looking for a technical brain? I’ll assist you to bring your idea into reality, by helping in-",
+        "pointers": [
+            {
+                "title": "Design Tech Architecture",
+                "star_rating": "5"
+            },
+            {
+                "title": "Building a MVP",
+                "star_rating": "5"
+            },
+            {
+                "title": "Hire Team",
+                "star_rating": "5"
+            },
+            {
+                "title": "Implement best practices",
+                "star_rating": "5"
+            }
+        ]
+    },
+    {
+        "title": "Front-end Development",
+        "subtitle": "I can build mobile as well as complex web applications which are good looking & responsive.",
+        "pointers": [
+            {
+                "title": "HTML/CSS/JS",
+                "star_rating": "5"
+            },
+            {
+                "title": "UI/UX",
+                "star_rating": "5"
+            },
+            {
+                "title": "React Web/Native",
+                "star_rating": "5"
+            },
+            {
+                "title": "Angular",
+                "star_rating": "3.5"
+            },
+            {
+                "title": "Android",
+                "star_rating": "5"
+            },
+            {
+                "title": "iOS",
+                "star_rating": "3"
+            },
+            {
+                "title": "Progressive web app",
+                "star_rating": "4.5"
+            },
+            {
+                "title": "Cross platform applications",
+                "star_rating": "5"
+            }
+        ]
+    },
+    {
+        "title": "API & Back-end Development",
+        "subtitle": "I am a person who loves to go in detail of a business logic & therefore back-end development excites me a lot.",
+        "pointers": [
+            {
+                "title": "Node.js",
+                "star_rating": "5"
+            },
+            {
+                "title": "Express.js",
+                "star_rating": "5"
+            },
+            {
+                "title": "PHP (Laravel, CI)",
+                "star_rating": "4"
+            },
+            {
+                "title": "Java",
+                "star_rating": "5"
+            },
+            {
+                "title": "Postgres/MySQL",
+                "star_rating": "5"
+            },
+            {
+                "title": "Mongo",
+                "star_rating": "5"
+            },
+            {
+                "title": "Firebase Realtime Database",
+                "star_rating": "5"
+            }
+        ]
+    },
+    {
+        "title": "DevOps",
+        "subtitle": "I can help companies deliver applications and services at high velocity & hence improve their time to market.",
+        "pointers": [
+            {
+                "title": "AWS",
+                "star_rating": "5"
+            },
+            {
+                "title": "Kubernetes",
+                "star_rating": "5"
+            },
+            {
+                "title": "Docker",
+                "star_rating": "4"
+            },
+            {
+                "title": "Google Cloud Platform",
+                "star_rating": "5"
+            },
+            {
+                "title": "PaaS",
+                "star_rating": "5"
+            }
+        ]
+    },
+    {
+        "title": "Subject Matter Expert",
+        "subtitle": "I have worked on a variety of domain which has helped me develop deep understanding about",
+        "pointers": [
+            {
+                "title": "Banking,Financial,Insurance",
+                "star_rating": "5"
+            },
+            {
+                "title": "Environment&Ecology",
+                "star_rating": "5"
+            },
+            {
+                "title": "Consumer apps",
+                "star_rating": "4"
+            },
+            {
+                "title": "FMCG",
+                "star_rating": "5"
+            },
+            {
+                "title": "E-commerce",
+                "star_rating": "5"
+            }
+        ]
+    }
+]
