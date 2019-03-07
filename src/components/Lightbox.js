@@ -13,7 +13,7 @@ class Lightbox extends Component {
     window.addEventListener('keyup', this.handleKeyUp, false)
   }
 
-  componentWillUnmount = () => {
+  componentWillUnmount = () => {    
     window.removeEventListener('keyup', this.handleKeyUp, false)
   }
 

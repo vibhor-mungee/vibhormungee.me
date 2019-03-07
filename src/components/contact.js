@@ -7,8 +7,10 @@ import {
 	Tooltip,
 	Position
 } from 'evergreen-ui'
-import { Widget, addResponseMessage, toggleWidget } from 'react-chat-widget';
 import axios from 'axios';
+if (typeof window !== 'undefined') {
+	const { Widget, addResponseMessage, toggleWidget } = require('react-chat-widget');
+}
 import 'react-chat-widget/lib/styles.css';
 import "./contact.css"
 /*
@@ -77,7 +79,7 @@ class Contact extends React.PureComponent {
 						}
 					}
 				`}
-				render={data => (
+				render={data => (					
 					<Widget
 						title={data.personalDetailsJson.name}
 						subtitle=""						

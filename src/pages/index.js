@@ -82,7 +82,7 @@ class IndexPage extends React.PureComponent{
               <ResultFocus theme={theme}/>
               <Projects theme={theme}/>
               <References theme={theme}/>
-              <Contact />
+              {typeof window !== 'undefined' && <Contact /> }
               <ContactCard theme={theme} />
             </Layout>
           }
