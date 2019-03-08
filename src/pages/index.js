@@ -40,39 +40,16 @@ class IndexPage extends React.PureComponent{
           <ThemeConsumer>
           {theme => 
             <Layout>
-              <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-              <Pane 
-                clearfix
-                display="flex"
-                flexDirection="row"
-                paddingTop={100}
-                paddingBottom={50}
-              >
-                <Pane
-                  clearfix
-                  height={180}
-                  width={480}
-                  display="flex"
-                  alignItems="left"
-                  justifyContent="center"
-                  flexDirection="column"
-                  padding={20}
-                >
+              <SEO title="Home" keywords={[`vibhor`, `vibhormungee`, `gatsby`, `application`, `react`, `resume`, `portfolio`]} />
+              <div className="row flex-column-reverse flex-md-row">
+                <div className="col-lg-6 col-sm-12 p-5">
                   <Heading size={800} marginBottom={20}>Hey there</Heading>
                   <Paragraph>{data.personalDetailsJson.about_me}</Paragraph>
-                </Pane>
-                <Pane
-                  height={200}
-                  width={200}
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  flexDirection="column"
-                  marginLeft={140}
-                >
+                </div>
+                <div className="col-lg-6 col-sm-12 p-5 text-center">
                   <Icon icon="console" color='#47B881' size={200} />
-                </Pane>
-              </Pane>
+                </div>
+              </div>
               <Experise theme={theme}/>
               <Section
                 heading="What do I do?"
@@ -80,10 +57,10 @@ class IndexPage extends React.PureComponent{
                 theme={theme}
               />          
               <ResultFocus theme={theme}/>
-              <Projects theme={theme}/>
+              {/* <Projects theme={theme}/> */}
               <References theme={theme}/>
               {typeof window !== 'undefined' && <Contact /> }
-              <ContactCard theme={theme} />
+               {/* <ContactCard theme={theme} /> */}
             </Layout>
           }
         </ThemeConsumer>

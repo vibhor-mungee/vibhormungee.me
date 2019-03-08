@@ -46,27 +46,18 @@ const References = ({theme}) => (
             <Heading size={600} marginBottom={20} textAlign="center">
               What others have to say about me?
             </Heading>
-            {data.allReferencesJson.edges.map(({node}) => (
-              <Pane                
-                key={node.id}   
-                background={theme.colors.background.tint2}  
-                float="left"
-                width={240}
-                height={300}
-                margin={24}
-                padding={24}
-                display="flex"
-                flexDirection="column"
-                alignItems="center"
-                elevation={1}
-                hoverElevation={4}
-              >
-								<Avatar name={node.name} size={160} marginBottom={20} />
-                <Heading marginBottom={5}>{node.name}</Heading>
-								<Text size={300} marginBottom={20}>({node.designation})</Text>
-                <Paragraph>{node.comment}</Paragraph>
-              </Pane>          
-            ))}
+            <div className="row justify-content-center">
+              {data.allReferencesJson.edges.map(({node}) => (
+                <div className="col-lg-3 m-2" key={node.id}>
+                  <div className="card shadow h-100 p-3 align-items-center" style={{backgroundColor: "#F7F9FD"}}>
+                    <Avatar name={node.name} size={160} marginBottom={20} />
+                    <Heading marginBottom={5}>{node.name}</Heading>
+                    <Text size={300} marginBottom={20}>({node.designation})</Text>
+                    <Paragraph>{node.comment}</Paragraph>
+                  </div>
+                </div>          
+              ))}
+            </div>
           </Pane>
     )}
   />

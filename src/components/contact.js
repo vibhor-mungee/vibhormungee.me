@@ -8,9 +8,8 @@ import {
 	Position
 } from 'evergreen-ui'
 import axios from 'axios';
-if (typeof window !== 'undefined') {
-	const { Widget, addResponseMessage, toggleWidget } = require('react-chat-widget');
-}
+import { Widget, addResponseMessage, toggleWidget } from 'react-chat-widget';
+
 import 'react-chat-widget/lib/styles.css';
 import "./contact.css"
 /*
@@ -34,15 +33,17 @@ class Contact extends React.PureComponent {
 		}
 	}
 	componentDidMount(){
-		setTimeout(function(){this.setState({showPill:true},()=>{
-			addResponseMessage("Hi There!");
-			addResponseMessage("How can I help you?");
-		})}.bind(this), 2000);
-		setTimeout(function(){
-			this.setState({
-				showTooltip: ''
-			})
-		}.bind(this), 10000);
+		if (typeof window !== 'undefined') {
+			setTimeout(function(){this.setState({showPill:true},()=>{
+				addResponseMessage("Hi There!");
+				addResponseMessage("How can I help you?");
+			})}.bind(this), 2000);
+			setTimeout(function(){
+				this.setState({
+					showTooltip: ''
+				})
+			}.bind(this), 10000);
+		}
 	}
 
 	handleNewUserMessage = (newMessage) => {

@@ -4,11 +4,11 @@ import React from "react"
 import { Pane, Heading } from 'evergreen-ui'
 
 const Header = ({ siteTitle }) => (
-  <Pane display="flex" padding={16} background='#47B881' borderRadius={3}>
+  <div className="container-fluid py-2 px-4" style={{background: '#47B881'}}>
     <Pane flex={1} alignItems="center" display="flex">
-      <Heading marginLeft={245} size={600} color="#F9F9FB">{siteTitle}</Heading>
+      <Heading size={600} color="#F9F9FB">{siteTitle}</Heading>
     </Pane>
-  </Pane>
+  </div>
 )
 
 Header.propTypes = {

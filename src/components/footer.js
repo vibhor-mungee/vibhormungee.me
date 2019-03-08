@@ -4,16 +4,22 @@ import React from "react"
 import { Pane, Text, Heading } from 'evergreen-ui'
 
 const Footer = ({ siteTitle }) => (
-  <Pane display="flex" padding={16} background='#47B881' borderRadius={3}>
-    <Pane flex={1} alignItems="center" display="flex">
-      <Heading marginLeft={245} size={600} color="#F9F9FB">{siteTitle}</Heading>
-    </Pane>
-    <Text color="#F9F9F9" marginRight={245}>
-      © {new Date().getFullYear()}, Developed by: Vibhor Mungee using
-      {` `}
-      <a href="https://www.gatsbyjs.org">Gatsby</a>
-    </Text>
-  </Pane>
+  <div className="container-fluid py-2 px-4" style={{background: '#47B881'}}>
+    <div className="row">
+      <div className="col-lg-6 col-sm-12">
+        <Pane flex={1} alignItems="center" display="flex">
+          <Heading size={600} color="#F9F9FB">{siteTitle}</Heading>
+        </Pane>
+      </div>
+      <div className="col-lg-6 col-sm-12 text-lg-right">
+        <Text color="#F9F9F9">
+          © {new Date().getFullYear()}, Developed by: Vibhor Mungee using
+          {` `}
+          <a href="https://www.gatsbyjs.org">Gatsby</a>
+        </Text>
+      </div>
+    </div>
+  </div>
 )
 
 Footer.propTypes = {
