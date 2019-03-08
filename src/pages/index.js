@@ -3,8 +3,8 @@ import { StaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { graphql } from 'gatsby'
 import { 
-  Pane, 
   Paragraph, 
   Heading, 
   ThemeConsumer,
@@ -13,10 +13,9 @@ import {
 import Section from '../components/section';
 import Experise from '../components/expertise';
 import ResultFocus from '../components/resultFocus';
-import Projects from "../components/projects";
 import References from "../components/references";
 import Contact from "../components/contact";
-import ContactCard from "../components/contactCard";
+import Projects from "../components/projects";
 
 class IndexPage extends React.PureComponent{
   render() {
@@ -57,7 +56,7 @@ class IndexPage extends React.PureComponent{
                 theme={theme}
               />          
               <ResultFocus theme={theme}/>
-              {/* <Projects theme={theme}/> */}
+              <Projects theme={theme}/>
               <References theme={theme}/>
               {typeof window !== 'undefined' && <Contact /> }
                {/* <ContactCard theme={theme} /> */}

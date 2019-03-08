@@ -1,13 +1,12 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import { 
-	Pane, 
-	Table, 
-	Heading,
-	Icon,
-	Tooltip,
+	Pane, 	
 	Dialog,
-	Text
+	Text,
+	Tooltip,
+	Icon,
+	Heading
 } from 'evergreen-ui'
 import Component from "@reactions/component"
 import Gallery from "./gallery";
@@ -70,7 +69,104 @@ const Projects = ({theme}) => (
 								<Gallery folderName={state.imageFolder} />
 							</Pane>
 						</Dialog>
-            <Heading size={600} marginBottom={20} textAlign="center">
+						<Heading size={600} marginBottom={20} textAlign="center">
+              My Work
+            </Heading>
+						<div class="table-responsive">
+							<table class="table table-hover table-sm">
+								<thead>
+									<tr className="d-flex">
+										<th class="col-2" scope="col"><Heading size={300}>Project</Heading></th>
+										<th class="col-2" scope="col"><Heading size={300}>Type</Heading></th>
+										<th class="col-2" scope="col"><Heading size={300}>Mobile Frontend</Heading></th>
+										<th class="col-2" scope="col"><Heading size={300}>Mobile Backend</Heading></th>
+										<th class="col-2" scope="col"><Heading size={300}>Web Frontend</Heading></th>
+										<th class="col-2" scope="col"><Heading size={300}>Web Backend</Heading></th>
+										<th class="col-3" scope="col"><Heading size={300}>Database</Heading></th>
+										<th class="col-3" scope="col"><Heading size={300}>Infra Stack</Heading></th>
+									</tr>
+								</thead>
+								<tbody>
+									{allProjectsJson.edges.map(({node}) => (
+										<tr 
+											key={node.id} 
+											className="d-flex"
+											onClick={() => setState({ 
+												isShown: true,
+												projectTitle: node.name,
+												projectContent: node.description,
+												imageFolder: node.imageFolder
+											})}
+										>
+											<th class="col-2"  scope="row">
+												{node.name.trim().length < 11 ? 
+													<Text>{node.name}</Text> : 
+													<Tooltip content={node.name}>
+														<Text>{node.name}</Text>
+													</Tooltip>
+												}
+											</th>
+											<td class="col-2" >
+												{node.type.map(type => 
+														<Tooltip content={type.name}>
+															<Icon icon={type.icon} color="success" marginRight={16} />
+														</Tooltip>
+												)}
+											</td>
+											<td class="col-2" >
+												{node.mobileFrontend.trim().length < 11 ? 
+													<Text>{node.mobileFrontend}</Text> : 
+													<Tooltip content={node.mobileFrontend}>
+														<Text>{node.mobileFrontend}</Text>
+													</Tooltip>
+												}
+											</td>
+											<td class="col-2" >
+												{node.mobileBackend.trim().length < 11 ? 
+													<Text>{node.mobileBackend}</Text> : 
+													<Tooltip content={node.mobileBackend}>
+														<Text>{node.mobileBackend}</Text>
+													</Tooltip>
+												}
+											</td>
+											<td class="col-2" >
+												{node.websiteFrontend.trim().length < 11 ? 
+													<Text>{node.websiteFrontend}</Text> : 
+													<Tooltip content={node.websiteFrontend}>
+														<Text>{node.websiteFrontend}</Text>
+													</Tooltip>
+												}
+											</td>
+											<td class="col-2" >
+												{node.websiteBackend.trim().length < 11 ? 
+													<Text>{node.websiteBackend}</Text> : 
+													<Tooltip content={node.websiteBackend}>
+														<Text>{node.websiteBackend}</Text>
+													</Tooltip>
+												}
+											</td>
+											<td class="col-3" >
+												{node.database.trim().length < 11 ? 
+													<Text>{node.database}</Text> : 
+													<Tooltip content={node.database}>
+														<Text>{node.database}</Text>
+													</Tooltip>
+												}	
+											</td>
+											<td class="col-3" >
+												{node.infra.trim().length < 11 ? 
+													<Text>{node.infra}</Text> : 
+													<Tooltip content={node.infra}>
+														<Text>{node.infra}</Text>
+													</Tooltip>
+												}
+											</td>
+										</tr>
+									))}
+								</tbody>
+							</table>
+						</div>
+            {/* <Heading size={600} marginBottom={20} textAlign="center">
               My Work
             </Heading>
             <Table>
@@ -172,7 +268,7 @@ const Projects = ({theme}) => (
 									</Table.Row>
 								))}
 							</Table.VirtualBody>
-						</Table>
+						</Table> */}
           </Pane>
 					)}
 				</Component>
