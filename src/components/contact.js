@@ -31,7 +31,29 @@ class Contact extends React.PureComponent {
 			pillCount: 2,
 			showTooltip: true,
 		}
+		if(typeof window !== 'undefined'){
+			this.setState({width: window.innerWidth});
+		}
 	}
+
+	componentWillMount() {
+		if (typeof window !== 'undefined') {
+			window.addEventListener('resize', this.handleWindowSizeChange);
+		}
+	}
+
+	componentWillUnmount() {
+		if (typeof window !== 'undefined') {
+			window.removeEventListener('resize', this.handleWindowSizeChange);
+		}
+	}
+
+	handleWindowSizeChange = () => {
+		if(typeof window !== 'undefined'){
+			this.setState({ width: window.innerWidth });
+		}
+	};
+
 	componentDidMount(){
 		if (typeof window !== 'undefined') {
 			setTimeout(function(){this.setState({showPill:true},()=>{
@@ -81,7 +103,7 @@ class Contact extends React.PureComponent {
 					}
 				`}
 				render={data => (					
-					<Widget
+					this.state.width > 500 && <Widget
 						title={data.personalDetailsJson.name}
 						subtitle=""						
 						fullScreenMode={false}
@@ -110,7 +132,7 @@ class Contact extends React.PureComponent {
 							</Pane>
 						)}
 						handleNewUserMessage={this.handleNewUserMessage}
-					/>
+					/> 
 				)}
 			/>
 		)

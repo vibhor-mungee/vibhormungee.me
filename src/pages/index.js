@@ -42,7 +42,7 @@ class IndexPage extends React.PureComponent{
             <Layout>
               <SEO title="Home" keywords={[`vibhor`, `vibhormungee`, `gatsby`, `application`, `react`, `resume`, `portfolio`]} />
               <div className="row flex-column-reverse flex-md-row">
-                <div className="col-lg-6 col-sm-12 p-5">
+                <div className="col-lg-6 col-sm-12 p-5 text-lg-left text-center">
                   <Heading size={800} marginBottom={20}>Hey there</Heading>
                   <Paragraph>{data.personalDetailsJson.about_me}</Paragraph>
                 </div>

@@ -26,7 +26,9 @@ const Section = (props) => (
             {props.heading}
         </Heading>
         <Paragraph>
-            {props.paragraph}
+            <div className="text-lg-left text-center">
+                {props.paragraph}
+            </div>
         </Paragraph>
     </Pane>
 )
