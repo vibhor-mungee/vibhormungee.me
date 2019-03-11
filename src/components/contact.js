@@ -40,7 +40,7 @@ class Contact extends React.PureComponent {
 			})}.bind(this), 2000);
 			setTimeout(function(){
 				this.setState({
-					showTooltip: ''
+					showTooltip: false
 				})
 			}.bind(this), 10000);
 		}
