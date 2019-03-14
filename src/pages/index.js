@@ -17,6 +17,7 @@ import References from "../components/references";
 import Contact from "../components/contact";
 import Projects from "../components/projects";
 import ContactCard from "../components/contactCard";
+import ContactForm from "../components/contactForm";
 
 class IndexPage extends React.PureComponent{
   render() {
@@ -59,12 +60,8 @@ class IndexPage extends React.PureComponent{
               <ResultFocus theme={theme}/>
               <Projects theme={theme}/>
               <References theme={theme}/>
-              {typeof window !== 'undefined' && 
-              <div className="d-none d-lg-block">
-                <Contact /> 
-              </div>
-              }
-               <ContactCard theme={theme} />
+              <ContactCard theme={theme} />
+              <ContactForm />
             </Layout>
           }
         </ThemeConsumer>
