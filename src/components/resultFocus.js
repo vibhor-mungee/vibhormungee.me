@@ -25,6 +25,7 @@ const ResultFocus = ({theme}) => (
 			allResultFocusJson{
 			 	edges{
 				 	node{
+						id
 					 	title
 					 	content
 				 	}
@@ -47,6 +48,7 @@ const ResultFocus = ({theme}) => (
 					</Heading>
 					{allResultFocusJson.edges.map(({node}) => (
 						<Card 
+							key={node.id}
 							width="90%"
 							background={theme.colors.background.tint2} 
 							display="flex"

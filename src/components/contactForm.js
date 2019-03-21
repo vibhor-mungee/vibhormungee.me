@@ -15,12 +15,13 @@ class ContactForm extends Component {
 					title="I’d love to hear from you!"
 					isShown={this.state.isShown}
 					onCloseComplete={() => this.setState({ isShown: false })}
+					hasFooter={false}
 				>
 					<form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true" netlify>
 						<p>
 							<TextInput
 								name="email"								
-								placeholder="Email..."
+								placeholder="Please enter you Email Address..."
 							/>
 						</p>
 						<p>
@@ -41,7 +42,7 @@ class ContactForm extends Component {
 					intent="success"
 					className="contact-btn"
 				>
-					Get in Touch...
+					Contact Me
 				</Button>				
       </Fragment>
     )

@@ -2,11 +2,12 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import { 
 	Pane, 	
-	Dialog,
+	SideSheet,
 	Text,
 	Tooltip,
 	Icon,
-	Heading
+	Heading,
+	Position
 } from 'evergreen-ui'
 import Component from "@reactions/component"
 import Gallery from "./gallery";
@@ -48,7 +49,8 @@ const Projects = ({theme}) => (
 			}
 		}
     `}
-    render={({allProjectsJson}) => (
+    render={({allProjectsJson}) => {
+			return (
 			<Component initialState={{ isShown: false, projectTitle: '', projectContent: '', imageFolder: '' }}>
   			{({ state, setState }) => (
         <Pane
@@ -58,7 +60,29 @@ const Projects = ({theme}) => (
 						paddingBottom={50}										
             clearfix
           >
-						<Dialog
+						<SideSheet
+							isShown={state.isShown}
+							position={Position.RIGHT}
+							title={state.projectTitle}
+							onCloseComplete={() => setState({ isShown: false })}
+						>
+							<Pane zIndex={1} flexShrink={0} elevation={0} backgroundColor="white">
+								<Pane padding={16}>
+									<Heading size={600}>{state.projectTitle}</Heading>
+								</Pane>
+							</Pane>
+							<Pane zIndex={1} flexShrink={0} elevation={0} backgroundColor="white">
+								<Pane padding={16}>
+									{state.projectContent}							
+								</Pane>
+							</Pane>
+							<Pane zIndex={1} flexShrink={0} elevation={0} backgroundColor="white">
+								<Pane margin={20}>
+									<Gallery folderName={state.imageFolder} />
+								</Pane>
+							</Pane>
+						</SideSheet>
+						{/* <Dialog
 							isShown={state.isShown}
 							title={state.projectTitle}
 							onCloseComplete={() => setState({ isShown: false })}
@@ -68,22 +92,22 @@ const Projects = ({theme}) => (
 							<Pane margin={20}>
 								<Gallery folderName={state.imageFolder} />
 							</Pane>
-						</Dialog>
+						</Dialog> */}
 						<Heading size={600} marginBottom={20} textAlign="center">
               My Work
             </Heading>
-						<div class="table-responsive">
-							<table class="table table-hover table-sm">
+						<div className="table-responsive">
+							<table className="table table-hover table-sm">
 								<thead>
 									<tr className="d-flex">
-										<th class="col-2" scope="col"><Heading size={300}>Project</Heading></th>
-										<th class="col-2" scope="col"><Heading size={300}>Type</Heading></th>
-										<th class="col-2" scope="col"><Heading size={300}>Mobile Frontend</Heading></th>
-										<th class="col-2" scope="col"><Heading size={300}>Mobile Backend</Heading></th>
-										<th class="col-2" scope="col"><Heading size={300}>Web Frontend</Heading></th>
-										<th class="col-2" scope="col"><Heading size={300}>Web Backend</Heading></th>
-										<th class="col-3" scope="col"><Heading size={300}>Database</Heading></th>
-										<th class="col-3" scope="col"><Heading size={300}>Infra Stack</Heading></th>
+										<th className="col-2" scope="col"><Heading size={300}>Project</Heading></th>
+										<th className="col-2" scope="col"><Heading size={300}>Type</Heading></th>
+										<th className="col-2" scope="col"><Heading size={300}>Mobile Frontend</Heading></th>
+										<th className="col-2" scope="col"><Heading size={300}>Mobile Backend</Heading></th>
+										<th className="col-2" scope="col"><Heading size={300}>Web Frontend</Heading></th>
+										<th className="col-2" scope="col"><Heading size={300}>Web Backend</Heading></th>
+										<th className="col-3" scope="col"><Heading size={300}>Database</Heading></th>
+										<th className="col-3" scope="col"><Heading size={300}>Infra Stack</Heading></th>
 									</tr>
 								</thead>
 								<tbody>
@@ -91,6 +115,7 @@ const Projects = ({theme}) => (
 										<tr 
 											key={node.id} 
 											className="d-flex"
+											style={{cursor: "pointer"}}
 											onClick={() => setState({ 
 												isShown: true,
 												projectTitle: node.name,
@@ -98,7 +123,7 @@ const Projects = ({theme}) => (
 												imageFolder: node.imageFolder
 											})}
 										>
-											<th class="col-2"  scope="row">
+											<th className="col-2"  scope="row">
 												{node.name.trim().length < 11 ? 
 													<Text>{node.name}</Text> : 
 													<Tooltip content={node.name}>
@@ -106,14 +131,14 @@ const Projects = ({theme}) => (
 													</Tooltip>
 												}
 											</th>
-											<td class="col-2" >
+											<td className="col-2">
 												{node.type.map(type => 
-														<Tooltip content={type.name}>
+														<Tooltip content={type.name} key={type.name}>
 															<Icon icon={type.icon} color="success" marginRight={16} />
 														</Tooltip>
 												)}
 											</td>
-											<td class="col-2" >
+											<td className="col-2" >
 												{node.mobileFrontend.trim().length < 11 ? 
 													<Text>{node.mobileFrontend}</Text> : 
 													<Tooltip content={node.mobileFrontend}>
@@ -121,7 +146,7 @@ const Projects = ({theme}) => (
 													</Tooltip>
 												}
 											</td>
-											<td class="col-2" >
+											<td className="col-2" >
 												{node.mobileBackend.trim().length < 11 ? 
 													<Text>{node.mobileBackend}</Text> : 
 													<Tooltip content={node.mobileBackend}>
@@ -129,7 +154,7 @@ const Projects = ({theme}) => (
 													</Tooltip>
 												}
 											</td>
-											<td class="col-2" >
+											<td className="col-2" >
 												{node.websiteFrontend.trim().length < 11 ? 
 													<Text>{node.websiteFrontend}</Text> : 
 													<Tooltip content={node.websiteFrontend}>
@@ -137,7 +162,7 @@ const Projects = ({theme}) => (
 													</Tooltip>
 												}
 											</td>
-											<td class="col-2" >
+											<td className="col-2" >
 												{node.websiteBackend.trim().length < 11 ? 
 													<Text>{node.websiteBackend}</Text> : 
 													<Tooltip content={node.websiteBackend}>
@@ -145,7 +170,7 @@ const Projects = ({theme}) => (
 													</Tooltip>
 												}
 											</td>
-											<td class="col-3" >
+											<td className="col-3" >
 												{node.database.trim().length < 11 ? 
 													<Text>{node.database}</Text> : 
 													<Tooltip content={node.database}>
@@ -153,7 +178,7 @@ const Projects = ({theme}) => (
 													</Tooltip>
 												}	
 											</td>
-											<td class="col-3" >
+											<td className="col-3" >
 												{node.infra.trim().length < 11 ? 
 													<Text>{node.infra}</Text> : 
 													<Tooltip content={node.infra}>
@@ -272,7 +297,7 @@ const Projects = ({theme}) => (
           </Pane>
 					)}
 				</Component>
-    )}
-  />
-)
+		)}}
+	/>)
+		
 export default Projects

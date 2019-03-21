@@ -76,7 +76,7 @@ class Lightbox extends Component {
 
         <LightboxModal visible={showLightbox} onKeyUp={e => this.handleKeyDown(e)}>
           <LightboxContent>
-            <Img sizes={finalImages[selectedImage].node.sizes} />
+          {finalImages[selectedImage] && <Img sizes={finalImages[selectedImage].node.sizes} />}
             <Controls>
               <Button onClick={this.closeModal}>Close</Button>
               <LeftRight>
@@ -100,7 +100,7 @@ const StyledImg = styled(Img)`
   top: 0;
   left: 0;
   width: 100%;
-  z-index: -1;
+  z-index: 1;
   height: 100%; // or whatever
   & > img {
     object-fit: cover !important; // or whatever
@@ -134,6 +134,7 @@ const Button = styled.button``
 
 const LightboxModal = styled.div`
   position: absolute;
+  z-index: 10;
   top: 0;
   left: 0;
   bottom: 0;

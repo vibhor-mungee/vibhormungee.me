@@ -25,10 +25,8 @@ const Section = (props) => (
         <Heading size={600} marginBottom={20} textAlign="center">
             {props.heading}
         </Heading>
-        <Paragraph>
-            <div className="text-lg-left text-center">
-                {props.paragraph}
-            </div>
+        <Paragraph className="text-lg-left text-center">
+            {props.paragraph}            
         </Paragraph>
     </Pane>
 )

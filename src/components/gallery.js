@@ -37,7 +37,6 @@ const Gallery = (props) => (
     render={(data) => (
 		typeof window !== 'undefined' &&
 			<Lightbox images={data.allImageSharp.edges} folderName={props.folderName} />
-		
     )}
   />
 )

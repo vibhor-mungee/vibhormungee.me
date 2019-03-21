@@ -8,16 +8,15 @@ import {
   Paragraph, 
   Heading, 
   ThemeConsumer,
-  Icon,
+  Avatar,
 } from 'evergreen-ui'
 import Section from '../components/section';
 import Experise from '../components/expertise';
 import ResultFocus from '../components/resultFocus';
 import References from "../components/references";
-import Contact from "../components/contact";
 import Projects from "../components/projects";
 import ContactCard from "../components/contactCard";
-import ContactForm from "../components/contactForm";
+
 
 class IndexPage extends React.PureComponent{
   render() {
@@ -34,6 +33,13 @@ class IndexPage extends React.PureComponent{
               what_do_i_do
               website
             }
+            placeholderImage: file(relativePath: { eq: "vibhormungee1.jpeg" }) {
+              childImageSharp {
+                fluid(maxWidth: 300) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         `}
         render={data => 
@@ -43,12 +49,18 @@ class IndexPage extends React.PureComponent{
             <Layout>
               <SEO title="Home" keywords={[`vibhor`, `vibhormungee`, `gatsby`, `application`, `react`, `resume`, `portfolio`]} />
               <div className="row flex-column-reverse flex-md-row">
-                <div className="col-lg-6 col-sm-12 p-5 text-lg-left text-center">
+                <div className="offset-lg-1 col-lg-5 col-sm-12 p-5 text-lg-left text-center">
                   <Heading size={800} marginBottom={20}>Hey there</Heading>
                   <Paragraph>{data.personalDetailsJson.about_me}</Paragraph>
                 </div>
-                <div className="col-lg-6 col-sm-12 p-5 text-center">
-                  <Icon icon="console" color='#47B881' size={200} />
+                <div className="offset-lg-1 col-lg-4 col-sm-12 p-5 text-center">
+                  <Avatar
+                    src={data.placeholderImage.childImageSharp.fluid.src}
+                    isSolid
+                    name="Vibhor Mungee"
+                    color="blue"
+                    size={250}
+                  />
                 </div>
               </div>
               <Experise theme={theme}/>
@@ -61,7 +73,6 @@ class IndexPage extends React.PureComponent{
               <Projects theme={theme}/>
               <References theme={theme}/>
               <ContactCard theme={theme} />
-              <ContactForm />
             </Layout>
           }
         </ThemeConsumer>

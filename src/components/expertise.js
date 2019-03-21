@@ -54,7 +54,7 @@ const Experise = ({theme}) => (
             </Heading>
             <div className="row justify-content-center">
               {data.allExpertiseJson.edges.map(({node}) => (
-                <div className="col-lg-3 m-2" key={node.id}>
+                <div className="col-lg-3 m-2 my-4" key={node.id}>
                   <div className="card shadow h-100 p-3" style={{backgroundColor: "#F7F9FD"}}>
                     <Heading marginBottom={20} alignSelf="center">{node.title}</Heading>
                     <Paragraph marginBottom={10}>{node.subtitle}</Paragraph>
