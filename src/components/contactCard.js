@@ -51,6 +51,13 @@ const ContactCard = ({theme}) => (
 				linkedin
 				locationUrl
 			}
+			placeholderImage: file(relativePath: { eq: "vibhormungee.jpeg" }) {
+              childImageSharp {
+                fluid(maxWidth: 300) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
 		}
     `}
     render={data => (
@@ -64,14 +71,14 @@ const ContactCard = ({theme}) => (
 										<div className="card px-4">
 										<div className="row">
 										<div className="col pt-5 col-lg-4 col-sm-12 text-center">
-											<Avatar name={data.personalDetailsJson.name} size={75} marginBottom={10}/>
+											<Avatar src={data.placeholderImage.childImageSharp.fluid.src} isSolid color="blue" name={data.personalDetailsJson.name} size={75} marginBottom={10}/>
 											<Heading>{data.personalDetailsJson.name}</Heading>
 											<Paragraph>{data.personalDetailsJson.designation}</Paragraph>
 										</div>
 										<div className="col p-4 col-lg-auto col-sm-12 d-flex flex-column">
 											<Text marginBottom={5}>
 												<a target="_blank" rel="noopener noreferrer" href={`tel:${data.personalDetailsJson.phone}`}>
-													<FaMobileAlt color="#34a853" style={{verticalAlign: 'middle', marginRight: 10}} />{data.personalDetailsJson.phone}
+													<FaMobileAlt color="#37474F" style={{verticalAlign: 'middle', marginRight: 10}} />{data.personalDetailsJson.phone}
 												</a>
 											</Text>
 											<Text marginBottom={5}>

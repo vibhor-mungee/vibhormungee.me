@@ -4,7 +4,7 @@
     max-height: 400px;
 }
 .rcw-conversation-container > .rcw-header {
-    background-color: #47B881;
+    background-color: #263238;
     height: 10px;
 }
 
@@ -35,7 +35,7 @@
 
 
 .rcw-widget-container > .rcw-launcher {
-    background-color: #47B881;
+    background-color: #263238;
     /* height: 50px; */
     /* width: 50px; */
 }
@@ -77,7 +77,7 @@
 }
 
 #button-pane > button > svg {
-    fill: #47B881 !important;
+    fill: #263238 !important;
 }
 
 .notification-pill {

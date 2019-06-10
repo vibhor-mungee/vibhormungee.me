@@ -5,10 +5,10 @@ import { Heading, Avatar } from 'evergreen-ui'
 import ContactForm from "../components/contactForm";
 
 const Header = ({ siteTitle, author }) => (
-  <div className="container-fluid py-2 px-4" style={{background: '#47B881'}}>
+  <div className="container-fluid py-2 px-4" style={{background: '#263238'}}>
     <div className="row">
       <div className="offset-md-2 col-md-7 d-flex align-items-center pl-4">
-        <Avatar name={author} size={40} marginRight={16} />
+        <Avatar isSolid color="blue" name={author} size={40} marginRight={16} />
         <Heading size={600} color="#F9F9FB">{siteTitle}</Heading>
       </div>
       <div className="col">

@@ -33,7 +33,7 @@ class IndexPage extends React.PureComponent{
               what_do_i_do
               website
             }
-            placeholderImage: file(relativePath: { eq: "vibhormungee1.jpeg" }) {
+            placeholderImage: file(relativePath: { eq: "vibhormungee.jpeg" }) {
               childImageSharp {
                 fluid(maxWidth: 300) {
                   ...GatsbyImageSharpFluid
@@ -71,7 +71,7 @@ class IndexPage extends React.PureComponent{
               />          
               <ResultFocus theme={theme}/>
               <Projects theme={theme}/>
-              <References theme={theme}/>
+              {/* <References theme={theme}/> */}
               <ContactCard theme={theme} />
             </Layout>
           }

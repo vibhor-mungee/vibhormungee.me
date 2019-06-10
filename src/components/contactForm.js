@@ -39,7 +39,6 @@ class ContactForm extends Component {
 				<Button
 					onClick={() => this.setState({ isShown: true })} 
 					iconBefore="hand"
-					intent="success"
 					className="contact-btn"
 				>
 					Contact Me

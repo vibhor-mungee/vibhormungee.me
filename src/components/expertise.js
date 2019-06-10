@@ -57,10 +57,10 @@ const Experise = ({theme}) => (
                 <div className="col-lg-3 m-2 my-4" key={node.id}>
                   <div className="card shadow h-100 p-3" style={{backgroundColor: "#F7F9FD"}}>
                     <Heading marginBottom={20} alignSelf="center">{node.title}</Heading>
-                    <Paragraph marginBottom={10}>{node.subtitle}</Paragraph>
+                    {/* <Paragraph marginBottom={10}>{node.subtitle}</Paragraph> */}
                     <UnorderedList
                       icon="tick-circle"
-                      iconColor="#47B881"
+                      iconColor="#263238"
                     >
                       {node.pointers.map(pointer => (
                         <ListItem key={pointer.title}>{pointer.title}</ListItem>

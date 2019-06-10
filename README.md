@@ -1,26 +1,22 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
+  <a href="vibhormungee.me">
+    <img alt="vibhormungee.me" src="https://cdn2.iconfinder.com/data/icons/symbol-color-common-9/32/command_prompt-512.png" width="60" />
   </a>
 </p>
 <h1 align="center">
-  Gatsby's default starter
+  Welcome!
 </h1>
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
-
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+If you've reached here that means you are looking to make similar resume for yourself. Just follow the below steps to generate similar resume website for yourself in virtually no time.
 
 ## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
-
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+1.  **Clone this repository.**
 
     ```sh
-    # create a new Gatsby site using the default starter
-    npx gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
+    # clone repository using git clone
+    git clone https://github.com/vibhor-mungee/vibhormungee.me.git myResumeWebsite
     ```
 
 1.  **Start developing.**

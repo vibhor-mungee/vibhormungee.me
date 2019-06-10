@@ -134,7 +134,7 @@ const Projects = ({theme}) => (
 											<td className="col-2">
 												{node.type.map(type => 
 														<Tooltip content={type.name} key={type.name}>
-															<Icon icon={type.icon} color="success" marginRight={16} />
+															<Icon icon={type.icon} color="#263238" marginRight={16} />
 														</Tooltip>
 												)}
 											</td>

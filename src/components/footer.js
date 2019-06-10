@@ -4,7 +4,7 @@ import React from "react"
 import { Pane, Text, Heading } from 'evergreen-ui'
 
 const Footer = ({ siteTitle }) => (
-  <div className="container-fluid py-2 px-4" style={{background: '#47B881'}}>
+  <div className="container-fluid py-2 px-4" style={{background: '#263238'}}>
     <div className="row">
       <div className="col-lg-6 col-sm-12">
         <Pane flex={1} alignItems="center" display="flex">
