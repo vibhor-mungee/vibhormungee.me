@@ -96,7 +96,6 @@ class Contact extends React.PureComponent {
 							name
 							email
 							about_me
-							phone
 							what_do_i_do
 							website
 						}

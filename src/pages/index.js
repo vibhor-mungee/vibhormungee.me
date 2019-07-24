@@ -13,7 +13,7 @@ import {
 import Section from '../components/section';
 import Experise from '../components/expertise';
 import ResultFocus from '../components/resultFocus';
-import References from "../components/references";
+// import References from "../components/references";
 import Projects from "../components/projects";
 import ContactCard from "../components/contactCard";
 
@@ -29,7 +29,6 @@ class IndexPage extends React.PureComponent{
               name
               email
               about_me
-              phone
               what_do_i_do
               website
             }

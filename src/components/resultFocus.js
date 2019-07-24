@@ -6,6 +6,7 @@ import {
 	Heading,
 	Card,
 } from 'evergreen-ui'
+import { Icon } from "evergreen-ui/commonjs/icon";
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -27,6 +28,7 @@ const ResultFocus = ({theme}) => (
 				 	node{
 						id
 					 	title
+						icon
 					 	content
 				 	}
 			 	}
@@ -46,28 +48,40 @@ const ResultFocus = ({theme}) => (
 					<Heading size={600} marginBottom={20}>
 							How I focus on results?
 					</Heading>
+					<Pane
+						display="flex"
+						flexDirection="row"
+						justifyContent="space-between"
+						alignItems="center" 
+						width="100%"
+						height="100%"
+						className="row"
+					>
 					{allResultFocusJson.edges.map(({node}) => (
 						<Card 
 							key={node.id}
-							width="90%"
 							background={theme.colors.background.tint2} 
 							display="flex"
 							flexDirection="column"
+							flexGrow={1}
 							alignItems="center"
-							justifyContent="center"
 							padding={20}
 							paddingLeft={50}
 							paddingRight={50}
 							borderRadius={20}
 							hoverElevation={3}
-							margin={10}
+							margin={1}
+							height={350}
+							className="col-lg-3 col-sm-12"
 						>
 							<Heading size={500} marginBottom={20}>{node.title}</Heading>
-							<Paragraph>
+							<Icon icon={node.icon} color="#263238" size={60} />
+							<Paragraph textAlign="center" marginTop={20}>
 								{node.content}
 							</Paragraph>
 						</Card>
 					))}
+					</Pane>
 				</Pane>
     )}
   />

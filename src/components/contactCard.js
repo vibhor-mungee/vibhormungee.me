@@ -5,12 +5,14 @@ import {
 	Heading,
 	Avatar,
 	Text,
+	Pane,
+	Card,
 } from 'evergreen-ui'
 
 import { 
 	FaRegEnvelopeOpen,
-	FaMobileAlt,
-	FaMapMarker,
+	// FaMobileAlt,
+	// FaMapMarker,
 	FaTwitterSquare,
 	FaFacebookSquare,
 	FaInstagram,
@@ -38,7 +40,6 @@ const ContactCard = ({theme}) => (
 				name
 				email
 				about_me
-				phone
 				what_do_i_do
 				website
 				designation
@@ -52,45 +53,52 @@ const ContactCard = ({theme}) => (
 				locationUrl
 			}
 			placeholderImage: file(relativePath: { eq: "vibhormungee.jpeg" }) {
-              childImageSharp {
-                fluid(maxWidth: 300) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
+				childImageSharp {
+					fluid(maxWidth: 300) {
+						...GatsbyImageSharpFluid
+					}
+				}
+			}
+			qrCodeImage: file(relativePath: { eq: "frame.png" }) {
+				childImageSharp {
+					fluid(maxWidth: 300) {
+						...GatsbyImageSharpFluid
+					}
+				}
+			}
 		}
     `}
     render={data => (
-        <div className="container p-4">
+        <Card className="container p-4">
             <Heading size={600} marginBottom={20} textAlign="center">
               Contact Me
             </Heading>
-						<div className="container-fluid">
-              <div className="m-auto">
-									<div className="row justify-content-center">
-										<div className="card px-4">
-										<div className="row">
-										<div className="col pt-5 col-lg-4 col-sm-12 text-center">
-											<Avatar src={data.placeholderImage.childImageSharp.fluid.src} isSolid color="blue" name={data.personalDetailsJson.name} size={75} marginBottom={10}/>
+						<Pane>
+              <Card className="m-auto">
+								<Card className="row justify-content-center">
+									<Card width="80%">
+										<div className="row d-flex justify-content-center align-content-center">
+										<div className="col-sm-12 pt-5 col-lg-4 text-center">
+											<Avatar src={data.placeholderImage.childImageSharp.fluid.src} isSolid color="blue" name={data.personalDetailsJson.name} size={75} marginBottom={10} />
 											<Heading>{data.personalDetailsJson.name}</Heading>
 											<Paragraph>{data.personalDetailsJson.designation}</Paragraph>
 										</div>
-										<div className="col p-4 col-lg-auto col-sm-12 d-flex flex-column">
-											<Text marginBottom={5}>
+										<div className="col-sm-12 p-4 col-lg-4 d-flex flex-column">
+											{/* <Text marginBottom={5}>
 												<a target="_blank" rel="noopener noreferrer" href={`tel:${data.personalDetailsJson.phone}`}>
 													<FaMobileAlt color="#37474F" style={{verticalAlign: 'middle', marginRight: 10}} />{data.personalDetailsJson.phone}
 												</a>
-											</Text>
+											</Text> */}
 											<Text marginBottom={5}>
 												<a target="_blank" rel="noopener noreferrer" href={`mailto:${data.personalDetailsJson.email}?Subject=Hey%20Vibhor!`}>
 													<FaRegEnvelopeOpen style={{verticalAlign: 'middle', marginRight: 10}} />{data.personalDetailsJson.email}
 												</a>
 											</Text>
-											<Text marginBottom={5}>
+											{/* <Text marginBottom={5}>
 												<a target="_blank" rel="noopener noreferrer" href={`${data.personalDetailsJson.locationUrl}`}>
 													<FaMapMarker color="#ea4335" style={{verticalAlign: 'middle', marginRight: 10}} />{data.personalDetailsJson.location}
 												</a>
-											</Text>
+											</Text> */}
 											<Text marginBottom={5}>
 												<a target="_blank" rel="noopener noreferrer" href={`${data.personalDetailsJson.linkedin}`}>
 													<FaLinkedin color="#0077B5" style={{verticalAlign: 'middle', marginRight: 10}} />{data.personalDetailsJson.name}
@@ -117,12 +125,15 @@ const ContactCard = ({theme}) => (
 												</a>
 											</Text>									
 										</div>
+										<div className="col-sm-12 col-lg-4">
+											<img src={data.qrCodeImage.childImageSharp.fluid.src} alt="qr-code" />
 										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-          </div>
+										</div>
+									</Card>
+								</Card>
+							</Card>
+						</Pane>
+          </Card>
     )}
   />
 )
