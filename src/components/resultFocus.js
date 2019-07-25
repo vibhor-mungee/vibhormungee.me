@@ -66,8 +66,6 @@ const ResultFocus = ({theme}) => (
 							flexGrow={1}
 							alignItems="center"
 							padding={20}
-							paddingLeft={50}
-							paddingRight={50}
 							borderRadius={20}
 							hoverElevation={3}
 							margin={1}

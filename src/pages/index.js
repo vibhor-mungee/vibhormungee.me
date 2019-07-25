@@ -46,7 +46,7 @@ class IndexPage extends React.PureComponent{
           <ThemeConsumer>
           {theme => 
             <Layout>
-              <SEO title="Home" keywords={[`vibhor`, `vibhormungee`, `gatsby`, `application`, `react`, `resume`, `portfolio`]} />
+              <SEO title="Vibhor Mungee" keywords={[`vibhor`, `vibhormungee`, `gatsby`, `application`, `react`, `react developer`, `full stack developer`, `react freelancer`, `resume`, `portfolio`]} />
               <div className="row flex-column-reverse flex-md-row">
                 <div className="offset-lg-1 col-lg-5 col-sm-12 p-5 text-lg-left text-center">
                   <Heading size={800} marginBottom={20}>Hey there</Heading>
