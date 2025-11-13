@@ -26,12 +26,20 @@ function SEO({ description, lang, meta, keywords, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: site.siteMetadata.title,
+    url: site.siteMetadata.siteUrl || "",
+    publisher: {
+      "@type": "Person",
+      name: site.siteMetadata.author
+    }
+  }
 
   return (
     <Helmet
-      htmlAttributes={{
-        lang,
-      }}
+      htmlAttributes={{ lang }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
@@ -77,7 +85,9 @@ function SEO({ description, lang, meta, keywords, title }) {
             : []
         )
         .concat(meta)}
-    />
+    >
+      <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+    </Helmet>
   )
 }
 

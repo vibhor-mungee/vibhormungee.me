@@ -1,8 +1,12 @@
 module.exports = {
+  flags: {
+    DEV_SSR: false
+  },
   siteMetadata: {
-    title: `vibhormungee.me`,
-    description: `Vibhor Mungee, this portfolio was made using Gatsby static site generator`,
+    title: `Vibhor Mungee — Full‑Stack Lead Engineer`,
+    description: `Full‑stack engineering leader in Stockholm specializing in React, Node.js, cloud (AWS/GCP), microservices, serverless and CI/CD. Building scalable, secure, high‑performance web and mobile platforms for fintech, retail and logistics.`,
     author: `Vibhor Mungee`,
+    siteUrl: `https://www.vibhormungee.me`,
   },
   mapping: {
     'MarkdownRemark.frontmatter.expertise': `ExpertiseJson`

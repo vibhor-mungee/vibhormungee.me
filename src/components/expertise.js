@@ -1,8 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import { 
-	Pane, 
-	Paragraph, 
+	Pane,
 	Heading,
 	UnorderedList,
 	ListItem

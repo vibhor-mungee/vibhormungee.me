@@ -52,7 +52,7 @@ const ContactCard = ({theme}) => (
 				linkedin
 				locationUrl
 			}
-			placeholderImage: file(relativePath: { eq: "vibhormungee.jpeg" }) {
+			placeholderImage: file(relativePath: { eq: "vibhormungee2.png" }) {
 				childImageSharp {
 					fluid(maxWidth: 300) {
 						...GatsbyImageSharpFluid
@@ -79,7 +79,14 @@ const ContactCard = ({theme}) => (
 									<Card width="80%">
 										<div className="row d-flex justify-content-center align-content-center">
 										<div className="col-sm-12 pt-5 col-lg-4 text-center">
-											<Avatar src={data.placeholderImage.childImageSharp.fluid.src} isSolid color="blue" name={data.personalDetailsJson.name} size={75} marginBottom={10} />
+											<Avatar 
+												src={data.placeholderImage?.childImageSharp?.fluid?.src || data.personalDetailsJson.name} 
+												isSolid 
+												color="blue" 
+												name={data.personalDetailsJson.name} 
+												size={75} 
+												marginBottom={10} 
+											/>
 											<Heading>{data.personalDetailsJson.name}</Heading>
 											<Paragraph>{data.personalDetailsJson.designation}</Paragraph>
 										</div>

@@ -12,7 +12,7 @@ class ContactForm extends Component {
     return (
       <Fragment>
 				<Dialog
-					title="I’d love to hear from you!"
+					title="Get in touch"
 					isShown={this.state.isShown}
 					onCloseComplete={() => this.setState({ isShown: false })}
 					hasFooter={false}
@@ -41,7 +41,7 @@ class ContactForm extends Component {
 					iconBefore="hand"
 					className="contact-btn"
 				>
-					Contact Me
+					Contact
 				</Button>				
       </Fragment>
     )

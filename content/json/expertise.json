@@ -1,67 +1,71 @@
 [
     {
-        "title": "Technical Architect",
-        "subtitle": "Are you a startup looking for a technical brain? I’ll assist you to bring your idea into reality, by helping in-",
+        "title": "Full Stack Lead Engineer",
+        "subtitle": "Leading engineering initiatives and delivering scalable, secure solutions across startups and enterprises.",
         "pointers": [
             {
-                "title": "Design Tech Architecture",
+                "title": "System Architecture Design",
                 "star_rating": "5"
             },
             {
-                "title": "Building a MVP",
+                "title": "Performance Optimization",
                 "star_rating": "5"
             },
             {
-                "title": "Hire Team",
+                "title": "Technical Team Leadership",
                 "star_rating": "5"
             },
             {
-                "title": "Implement best practices",
+                "title": "Scalable Application Development",
+                "star_rating": "5"
+            },
+            {
+                "title": "DevOps & CI/CD Implementation",
                 "star_rating": "5"
             }
         ]
     },
     {
         "title": "Front-end Development",
-        "subtitle": "I can build mobile as well as complex web applications which are good looking & responsive.",
+    "subtitle": "Building high‑performance web and cross‑platform mobile applications using modern JavaScript frameworks.",
         "pointers": [
             {
-                "title": "HTML/CSS/JS",
+                "title": "React.js",
                 "star_rating": "5"
             },
             {
-                "title": "UI/UX",
+                "title": "React Native",
                 "star_rating": "5"
             },
             {
-                "title": "React Web/Native",
+                "title": "Vue.js",
                 "star_rating": "5"
             },
             {
-                "title": "Angular",
-                "star_rating": "3.5"
-            },
-            {
-                "title": "Android",
+                "title": "Next.js",
                 "star_rating": "5"
             },
             {
-                "title": "iOS",
-                "star_rating": "3"
+                "title": "Redux",
+                "star_rating": "5"
             },
             {
-                "title": "Progressive web app",
-                "star_rating": "4.5"
+                "title": "Pinia",
+                "star_rating": "5"
             },
             {
-                "title": "Cross platform applications",
+                "title": "HTML/CSS/JavaScript",
+                "star_rating": "5"
+            },
+            {
+                "title": "Progressive web apps",
                 "star_rating": "5"
             }
         ]
     },
     {
         "title": "API & Back-end Development",
-        "subtitle": "I am a person who loves to go in detail of a business logic & therefore back-end development excites me a lot.",
+    "subtitle": "Designing robust APIs and backend systems, including microservices and serverless architectures.",
         "pointers": [
             {
                 "title": "Node.js",
@@ -72,75 +76,133 @@
                 "star_rating": "5"
             },
             {
-                "title": "PHP (Laravel, CI)",
+                "title": "Nest.js",
+                "star_rating": "5"
+            },
+            {
+                "title": "GraphQL",
+                "star_rating": "5"
+            },
+            {
+                "title": "Serverless",
+                "star_rating": "5"
+            },
+            {
+                "title": "PostgreSQL",
+                "star_rating": "5"
+            },
+            {
+                "title": "MySQL",
+                "star_rating": "5"
+            },
+            {
+                "title": "MongoDB",
+                "star_rating": "5"
+            },
+            {
+                "title": "Python",
                 "star_rating": "4"
             },
             {
                 "title": "Java",
-                "star_rating": "5"
-            },
-            {
-                "title": "Postgres/MySQL",
-                "star_rating": "5"
-            },
-            {
-                "title": "Mongo",
-                "star_rating": "5"
-            },
-            {
-                "title": "Firebase Realtime Database",
-                "star_rating": "5"
+                "star_rating": "4"
             }
         ]
     },
     {
-        "title": "DevOps",
-        "subtitle": "I can help companies deliver applications and services at high velocity & hence improve their time to market.",
+        "title": "DevOps & Cloud Platforms",
+    "subtitle": "Cloud infrastructure, CI/CD automation, and deployment best practices to reduce lead time and improve reliability.",
         "pointers": [
             {
                 "title": "AWS",
                 "star_rating": "5"
             },
             {
-                "title": "Kubernetes",
+                "title": "Google Cloud Platform",
+                "star_rating": "5"
+            },
+            {
+                "title": "Heroku",
+                "star_rating": "5"
+            },
+            {
+                "title": "Netlify",
+                "star_rating": "5"
+            },
+            {
+                "title": "Vercel",
+                "star_rating": "5"
+            },
+            {
+                "title": "Jenkins",
+                "star_rating": "5"
+            },
+            {
+                "title": "GitHub Actions",
+                "star_rating": "5"
+            },
+            {
+                "title": "Bitbucket Pipeline",
+                "star_rating": "5"
+            },
+            {
+                "title": "CloudFormation",
                 "star_rating": "5"
             },
             {
                 "title": "Docker",
                 "star_rating": "4"
-            },
+            }
+        ]
+    },
+    {
+        "title": "CMS & Modern Tools",
+    "subtitle": "Headless CMS and modern tooling for content‑driven applications and developer productivity.",
+        "pointers": [
             {
-                "title": "Google Cloud Platform",
+                "title": "Contentful",
                 "star_rating": "5"
             },
             {
-                "title": "PaaS",
+                "title": "Storyblok",
+                "star_rating": "5"
+            },
+            {
+                "title": "Strapi",
+                "star_rating": "5"
+            },
+            {
+                "title": "Git",
                 "star_rating": "5"
             }
         ]
     },
     {
         "title": "Subject Matter Expert",
-        "subtitle": "I have worked on a variety of domain which has helped me develop deep understanding about",
+        "subtitle": "Domain expertise across the following industries:",
         "pointers": [
             {
-                "title": "Banking,Financial,Insurance",
+                "title": "Insurance",
                 "star_rating": "5"
             },
             {
-                "title": "Environment&Ecology",
+                "title": "Finance & Banking",
                 "star_rating": "5"
             },
             {
-                "title": "Consumer apps",
-                "star_rating": "4"
-            },
-            {
-                "title": "FMCG",
+                "title": "Medical & Healthcare",
                 "star_rating": "5"
             },
             {
-                "title": "E-commerce",
+                "title": "Logistics & CRM",
+                "star_rating": "5"
+            },
+            {
+                "title": "E-commerce & Retail",
+                "star_rating": "5"
+            },
+            {
+                "title": "Environment & Ecology",
                 "star_rating": "5"
             }
         ]

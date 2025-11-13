@@ -17,16 +17,43 @@ If you've reached here that means you are looking to make similar resume for you
     ```sh
     # clone repository using git clone
     git clone https://github.com/vibhor-mungee/vibhormungee.me.git myResumeWebsite
+    cd myResumeWebsite/
     ```
 
-1.  **Start developing.**
+2.  **Install required software.**
 
-    Navigate into your new site’s directory and start it up.
+    This project requires Node.js 16.x and libvips (for image processing):
 
     ```sh
-    cd my-default-starter/
-    gatsby develop
+    # Install Node.js 16 (if you have nvm)
+    nvm install 16
+    nvm use 16
+
+    # Install libvips (macOS)
+    brew install vips
     ```
+
+3.  **Install dependencies.**
+
+    ```sh
+    npm install --legacy-peer-deps --ignore-scripts
+    ```
+
+4.  **Rebuild sharp (image processing).**
+
+    ```sh
+    npm rebuild sharp --legacy-peer-deps
+    ```
+
+5.  **Start developing.**
+
+    ```sh
+    ./dev.sh
+    # or manually:
+    npx gatsby develop
+    ```
+
+    Your site is now running at `http://localhost:8000`!
 
 1.  **Open the source code and start editing!**
 

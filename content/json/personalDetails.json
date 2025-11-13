@@ -1,18 +1,19 @@
 [
     {
         "name": "Vibhor Mungee",
-        "designation": "Freelance IT Consultant",
-        "about_me": "I am Vibhor, an ardent full stack developer, with 9+ years of IT experience, specializing in development of Frontend- Mobile (Android, iOS, Cross-platform), Web applications (React.js, Angular, Bootstrap) and Backend- Node.js and Express.js.",
+        "designation": "Full Stack Lead Engineer",
+        "about_me": "Full‑stack engineering leader with 14 years of experience architecting and delivering high‑performance web platforms and cross‑platform mobile apps. Specialties include React (Web/Native), Vue, Next.js, Node.js/Express/Nest, GraphQL, serverless architectures, and cloud on AWS and GCP. Proven track record leading teams, modernizing legacy systems, and building scalable, secure, and maintainable solutions for fintech, logistics, retail, and public sector.",
         "email": "vibhor.mungee@outlook.com",
+        "phone": "076 136 9620",
         "skype": "vibhor.mungee-6d",
         "twitter": "@vibhorrr",
         "github": "vibhor-mungee",
         "facebook": "vibhor.mungee",
         "instagram": "vibhorrr",
         "linkedin": "https://www.linkedin.com/in/vibhor-mungee-ab7259b/",
-        "location": "22° 42' 54'' N 75° 53' 10'' E",
-        "locationUrl": "https://goo.gl/maps/aFor1Ln6LfA2",
-        "what_do_i_do": "I enable teams to hit their key success metrics with my technical guidance and high- quality development. I have architect, designed, developed & maintained multiple software projects from the scratch to help solve real world problems. My skill ranges from developing simple websites that need to capture simple data, to huge and complex applications that deals with millions of users, to some out-of-the-box features.",
-        "website": "https://www.vibhormugee.me/"
+        "location": "Jämtlandsgatan 107, Vällingby, Stockholm, 162 60, Sweden",
+        "locationUrl": "https://goo.gl/maps/Stockholm-Sweden",
+        "what_do_i_do": "I design and ship reliable software at scale: discovery and solution architecture, iterative delivery, performance optimization, and CI/CD. Typical engagements include migrating monoliths to modern stacks, building cloud‑native APIs and frontends, improving developer experience, and implementing observability and security best practices to accelerate business outcomes.",
+        "website": "https://www.vibhormungee.me/"
     }
 ]

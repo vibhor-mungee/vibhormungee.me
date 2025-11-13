@@ -32,7 +32,7 @@ class IndexPage extends React.PureComponent{
               what_do_i_do
               website
             }
-            placeholderImage: file(relativePath: { eq: "vibhormungee.jpeg" }) {
+            placeholderImage: file(relativePath: { eq: "vibhormungee2.png" }) {
               childImageSharp {
                 fluid(maxWidth: 300) {
                   ...GatsbyImageSharpFluid
@@ -46,7 +46,9 @@ class IndexPage extends React.PureComponent{
           <ThemeConsumer>
           {theme => 
             <Layout>
-              <SEO title="Vibhor Mungee" keywords={[`vibhor`, `vibhormungee`, `gatsby`, `application`, `react`, `react developer`, `full stack developer`, `react freelancer`, `resume`, `portfolio`]} />
+              <SEO title="Vibhor Mungee — Full‑Stack Lead Engineer" keywords={[
+                `vibhor`, `vibhormungee`, `full stack engineer`, `software architect`, `react`, `react native`, `vue`, `next.js`, `node.js`, `express`, `nest.js`, `graphql`, `serverless`, `aws`, `gcp`, `ci/cd`, `microservices`, `stockholm`
+              ]} />
               <div className="row flex-column-reverse flex-md-row">
                 <div className="offset-lg-1 col-lg-5 col-sm-12 p-5 text-lg-left text-center">
                   <Heading size={800} marginBottom={20}>Hey there</Heading>
@@ -64,7 +66,7 @@ class IndexPage extends React.PureComponent{
               </div>
               <Experise theme={theme}/>
               <Section
-                heading="What do I do?"
+                heading="What I do"
                 paragraph={data.personalDetailsJson.what_do_i_do}
                 theme={theme}
               />          

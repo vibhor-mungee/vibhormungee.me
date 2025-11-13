@@ -1,7 +1,79 @@
 [
 	{
+		"name": "PostNord - Retail Portal",
+		"description": "Full stack lead engineer developing and maintaining the Retail Portal, enabling back office functionalities for Service points, area managers and PostNord business support. Migrated functionalities from legacy rich client system to web application. Improved deployment process of Vue.js and serverless applications and migrated repository and CI/CD pipeline from Bitbucket to GitHub.",
+		"imageFolder": "PostNord",
+		"type": [
+			{
+				"name": "Web App",
+				"icon": "application"
+			}
+		],
+		"techStack": "Vue.js, Node.js, Serverless, PostgreSQL, AWS, GitHub Actions"
+	},
+	{
+		"name": "Klarna - In-store Applications",
+		"description": "Full stack lead engineer developing, maintaining and scaling In-store applications and APIs. Led performance testing for In-store applications and checked for peak readiness. Enhanced system architecture to improve performance and scalability for enterprise-level payment solutions.",
+		"imageFolder": "Klarna",
+		"type": [
+			{
+				"name": "Mobile App",
+				"icon": "mobile-phone"
+			},
+			{
+				"name": "Web App",
+				"icon": "application"
+			}
+		],
+		"techStack": "React Native, React.js, Next.js, Node.js, Express.js, Nest.js, GraphQL, PostgreSQL, MongoDB, AWS, Kubernetes, Jenkins"
+	},
+	{
+		"name": "Ministry of Education Singapore - Appointment Booking SaaS",
+		"description": "As Technical Lead at 6DegreesIT, architected and led the development of a SaaS-based appointment booking application for the Ministry of Education, Singapore. Diversified the company's technology stack from PHP to modern JavaScript frameworks and mentored technology teams implementing best practices.",
+		"imageFolder": "MOE-Singapore",
+		"type": [
+			{
+				"name": "Web App",
+				"icon": "application"
+			},
+			{
+				"name": "Mobile App",
+				"icon": "mobile-phone"
+			}
+		],
+		"techStack": "React Native, React.js, Node.js, Express.js, PostgreSQL, AWS, CloudFormation"
+	},
+	{
+		"name": "USAID Forest-PLUS - Community-Based Micro-planning",
+		"description": "As Technical Lead at Iora Ecological Solutions, developed a Community-Based Micro-planning application under the USAID-funded Forest-PLUS program. Collaborated with the University of Michigan for a Forest inventory application focused on environmental conservation and ecological data management.",
+		"imageFolder": "Forest-PLUS",
+		"type": [
+			{
+				"name": "Web App",
+				"icon": "application"
+			},
+			{
+				"name": "Mobile App",
+				"icon": "mobile-phone"
+			}
+		],
+		"techStack": "Android, Angular, Node.js, Express.js, PostgreSQL, AWS"
+	},
+	{
+		"name": "Allianz Germany - GEP Insurance Platform",
+		"description": "As Senior Software Engineer at Accenture, supported Allianz Germany's GEP project, customizing the ABS platform. Developed and enhanced UI and backend functionality for insurance systems, working on complex enterprise insurance solutions in Munich and Pune.",
+		"imageFolder": "Allianz",
+		"type": [
+			{
+				"name": "Web App",
+				"icon": "application"
+			}
+		],
+		"techStack": "Java, JSP, Spring, Oracle, On-premise"
+	},
+	{
 		"name": "Stashfin",
-		"description": "StashFin app allows users to enter a few pieces of information, pick a personal loan that fits individual’s budget, and see their progress with the same every month.",
+		"description": "StashFin app allows users to enter a few pieces of information, pick a personal loan that fits individual's budget, and see their progress with the same every month.",
 		"imageFolder": "Stashfin",
 		"type": [
 			{
@@ -13,12 +85,7 @@
 				"icon": "application"
 			}
 		],
-		"mobileFrontend": "Android, iOS",
-		"mobileBackend": "Code igniter",
-		"websiteFrontend": "React.js",
-		"websiteBackend": "Code igniter",
-		"database": "MySQL",
-		"infra": "AWS Elastic Beanstalk, S3"
+		"techStack": "Android, iOS, React.js, CodeIgniter, MySQL, AWS Elastic Beanstalk, S3"
 	},
 	{
 		"name": "Janab",
@@ -30,12 +97,7 @@
 				"icon": "mobile-phone"
 			}
 		],
-		"mobileFrontend": "Ionic2",
-		"mobileBackend": "Firebase Backend as a service",
-		"websiteFrontend": "NA",
-		"websiteBackend": "NA",
-		"database": "Firebase Realtime Database",
-		"infra": "Google Cloud Platform"
+		"techStack": "Ionic2, Firebase BaaS, Firebase Realtime Database, Google Cloud Platform"
 	},
 	{
 		"name": "Joye",
@@ -51,12 +113,7 @@
 				"icon": "application"
 			}
 		],
-		"mobileFrontend": "iOS",
-		"mobileBackend": "DialogFlow for NLP",
-		"websiteFrontend": "Angular",
-		"websiteBackend": "NA",
-		"database": "Firebase Realtime Database",
-		"infra": "Google Cloud Platform"
+		"techStack": "iOS, DialogFlow (NLP), Angular, Firebase Realtime Database, Google Cloud Platform"
 	},
 	{
 		"name": "FBM",
@@ -72,12 +129,7 @@
 				"icon": "application"
 			}
 		],
-		"mobileFrontend": "Android",
-		"mobileBackend": "Node.js, Express.js",
-		"websiteFrontend": "Angular",
-		"websiteBackend": "Node.js, Express.js",
-		"database": "MySQL",
-		"infra": "Microservices Deployed to AWS ECS"
+		"techStack": "Android, Angular, Node.js, Express.js, MySQL, Microservices on AWS ECS"
 	},
 	{
 		"name": "BrainyFied",
@@ -89,12 +141,7 @@
 				"icon": "application"
 			}
 		],
-		"mobileFrontend": "NA",
-		"mobileBackend": "NA",
-		"websiteFrontend": "React.js",
-		"websiteBackend": "Node.js, Express.js",
-		"database": "Postgres + Mongo",
-		"infra": "AWS EC2"
+		"techStack": "React.js, Node.js, Express.js, Postgres, Mongo, AWS EC2"
 	},
 	{
 		"name": "FranchiseSoft",
@@ -110,12 +157,7 @@
 				"icon": "application"
 			}
 		],
-		"mobileFrontend": "Android, iOS",
-		"mobileBackend": "Node JS, Express JS",
-		"websiteFrontend": "React.js",
-		"websiteBackend": "Node.js, Express.js",
-		"database": "MySQL, Googledatastore",
-		"infra": "AWS Elasticbeanstalk"
+		"techStack": "Android, iOS, React.js, Node.js, Express.js, MySQL, Google Datastore, AWS Elastic Beanstalk"
 	},
 	{
 		"name": "Ezee Salon",
@@ -131,12 +173,7 @@
 				"icon": "application"
 			}
 		],
-		"mobileFrontend": "Android, iOS",
-		"mobileBackend": "Node JS, Express JS",
-		"websiteFrontend": "Angular 6",
-		"websiteBackend": "Node.js, Express.js",
-		"database": "Postgres",
-		"infra": "AWS Elasticbeanstalk"
+		"techStack": "Android, iOS, Angular 6, Node.js, Express.js, Postgres, AWS Elastic Beanstalk"
 	},
 	{
 		"name": "Pillion",
@@ -152,12 +189,7 @@
 				"icon": "application"
 			}
 		],
-		"mobileFrontend": "Android",
-		"mobileBackend": "Laravel",
-		"websiteFrontend": "Bootstrap",
-		"websiteBackend": "Laravel",
-		"database": "MySQL",
-		"infra": "AWS Elasticbeanstalk"
+		"techStack": "Android, Bootstrap, Laravel, MySQL, AWS Elastic Beanstalk"
 	},
 	{
 		"name": "Titan HST",
@@ -169,11 +201,6 @@
 				"icon": "mobile-phone"
 			}
 		],
-		"mobileFrontend": "Android, iOS",
-		"mobileBackend": "Java",
-		"websiteFrontend": "NA",
-		"websiteBackend": "NA",
-		"database": "MySQL",
-		"infra": "AWS Elasticbeanstalk"
+		"techStack": "Android, iOS, Java, MySQL, AWS Elastic Beanstalk"
 	}
 ]

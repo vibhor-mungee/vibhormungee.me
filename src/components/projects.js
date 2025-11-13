@@ -1,16 +1,26 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import { 
-	Pane, 	
-	SideSheet,
+	Pane,
 	Text,
 	Tooltip,
-	Icon,
 	Heading,
-	Position
+	Badge,
+	Icon
 } from 'evergreen-ui'
 import Component from "@reactions/component"
-import Gallery from "./gallery";
+
+const renderTechBadges = (stack, id) => {
+	if (!stack) return null;
+	return stack.split(',').map((raw, idx) => {
+		const item = raw.trim();
+		return (
+			<Badge key={`${id}-tech-${idx}`} marginRight={8} marginBottom={8} color="blue">
+				{item}
+			</Badge>
+		)
+	});
+};
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -33,17 +43,7 @@ const Projects = ({theme}) => (
 						id
 						name
 						description
-						imageFolder
-						type {
-							name
-							icon
-						}
-						mobileFrontend
-						mobileBackend
-						websiteFrontend
-						websiteBackend
-						database
-						infra
+						techStack
 					}
 				}
 			}
@@ -51,37 +51,15 @@ const Projects = ({theme}) => (
     `}
     render={({allProjectsJson}) => {
 			return (
-			<Component initialState={{ isShown: false, projectTitle: '', projectContent: '', imageFolder: '' }}>
-  			{({ state, setState }) => (
-        <Pane
-            marginBottom={50}
+			<Component initialState={{ selectedId: null }}>
+				{({ state, setState }) => (
+				<Pane
+						marginBottom={50}
 						marginTop={50}
-						paddingTop={50}										
-						paddingBottom={50}										
-            clearfix
-          >
-						<SideSheet
-							isShown={state.isShown}
-							position={Position.RIGHT}
-							title={state.projectTitle}
-							onCloseComplete={() => setState({ isShown: false })}
-						>
-							<Pane zIndex={1} flexShrink={0} elevation={0} backgroundColor="white">
-								<Pane padding={16}>
-									<Heading size={600}>{state.projectTitle}</Heading>
-								</Pane>
-							</Pane>
-							<Pane zIndex={1} flexShrink={0} elevation={0} backgroundColor="white">
-								<Pane padding={16}>
-									{state.projectContent}							
-								</Pane>
-							</Pane>
-							<Pane zIndex={1} flexShrink={0} elevation={0} backgroundColor="white">
-								<Pane margin={20}>
-									<Gallery folderName={state.imageFolder} />
-								</Pane>
-							</Pane>
-						</SideSheet>
+						paddingTop={50}
+						paddingBottom={50}
+						clearfix
+					>
 						{/* <Dialog
 							isShown={state.isShown}
 							title={state.projectTitle}
@@ -101,13 +79,8 @@ const Projects = ({theme}) => (
 								<thead>
 									<tr className="d-flex">
 										<th className="col-2" scope="col"><Heading size={300}>Project</Heading></th>
-										<th className="col-2" scope="col"><Heading size={300}>Type</Heading></th>
-										<th className="col-2" scope="col"><Heading size={300}>Mobile Frontend</Heading></th>
-										<th className="col-2" scope="col"><Heading size={300}>Mobile Backend</Heading></th>
-										<th className="col-2" scope="col"><Heading size={300}>Web Frontend</Heading></th>
-										<th className="col-2" scope="col"><Heading size={300}>Web Backend</Heading></th>
-										<th className="col-3" scope="col"><Heading size={300}>Database</Heading></th>
-										<th className="col-3" scope="col"><Heading size={300}>Infra Stack</Heading></th>
+										<th className="col-6" scope="col"><Heading size={300}>Tech Stack</Heading></th>
+										<th className="col-4" scope="col"><Heading size={300}>Description</Heading></th>
 									</tr>
 								</thead>
 								<tbody>
@@ -116,75 +89,38 @@ const Projects = ({theme}) => (
 											key={node.id} 
 											className="d-flex"
 											style={{cursor: "pointer"}}
-											onClick={() => setState({ 
-												isShown: true,
-												projectTitle: node.name,
-												projectContent: node.description,
-												imageFolder: node.imageFolder
-											})}
+											onClick={() => setState({ selectedId: state.selectedId === node.id ? null : node.id })}
+											aria-expanded={state.selectedId === node.id}
 										>
-											<th className="col-2"  scope="row">
-												{node.name.trim().length < 11 ? 
-													<Text>{node.name}</Text> : 
-													<Tooltip content={node.name}>
-														<Text>{node.name}</Text>
-													</Tooltip>
-												}
+											<th className="col-2" scope="row">
+												<Pane display="flex" alignItems="center">
+													<Icon 
+														icon={state.selectedId === node.id ? 'chevron-down' : 'chevron-right'} 
+														color="#263238" 
+														marginRight={8} 
+														aria-hidden
+													/>
+													{node.name.trim().length < 11 ? 
+														<Text>{node.name}</Text> : 
+														<Tooltip content={node.name}>
+															<Text>{node.name}</Text>
+														</Tooltip>
+													}
+												</Pane>
 											</th>
-											<td className="col-2">
-												{node.type.map(type => 
-														<Tooltip content={type.name} key={type.name}>
-															<Icon icon={type.icon} color="#263238" marginRight={16} />
+											<td className="col-6">
+												{renderTechBadges(node.techStack, node.id)}
+											</td>
+											<td className="col-4">
+												{state.selectedId === node.id ? (
+													<Text>{node.description}</Text>
+												) : (
+													node.description.length < 60 ? 
+														<Text>{node.description}</Text> : 
+														<Tooltip content={node.description}>
+															<Text>{node.description.substring(0,90)}…</Text>
 														</Tooltip>
 												)}
-											</td>
-											<td className="col-2" >
-												{node.mobileFrontend.trim().length < 11 ? 
-													<Text>{node.mobileFrontend}</Text> : 
-													<Tooltip content={node.mobileFrontend}>
-														<Text>{node.mobileFrontend}</Text>
-													</Tooltip>
-												}
-											</td>
-											<td className="col-2" >
-												{node.mobileBackend.trim().length < 11 ? 
-													<Text>{node.mobileBackend}</Text> : 
-													<Tooltip content={node.mobileBackend}>
-														<Text>{node.mobileBackend}</Text>
-													</Tooltip>
-												}
-											</td>
-											<td className="col-2" >
-												{node.websiteFrontend.trim().length < 11 ? 
-													<Text>{node.websiteFrontend}</Text> : 
-													<Tooltip content={node.websiteFrontend}>
-														<Text>{node.websiteFrontend}</Text>
-													</Tooltip>
-												}
-											</td>
-											<td className="col-2" >
-												{node.websiteBackend.trim().length < 11 ? 
-													<Text>{node.websiteBackend}</Text> : 
-													<Tooltip content={node.websiteBackend}>
-														<Text>{node.websiteBackend}</Text>
-													</Tooltip>
-												}
-											</td>
-											<td className="col-3" >
-												{node.database.trim().length < 11 ? 
-													<Text>{node.database}</Text> : 
-													<Tooltip content={node.database}>
-														<Text>{node.database}</Text>
-													</Tooltip>
-												}	
-											</td>
-											<td className="col-3" >
-												{node.infra.trim().length < 11 ? 
-													<Text>{node.infra}</Text> : 
-													<Tooltip content={node.infra}>
-														<Text>{node.infra}</Text>
-													</Tooltip>
-												}
 											</td>
 										</tr>
 									))}
@@ -203,23 +139,9 @@ const Projects = ({theme}) => (
 									Type
 								</Table.TextHeaderCell>
 								<Table.TextHeaderCell flexBasis={40}>
-									Mobile Frontend
+									Tech Stack
 								</Table.TextHeaderCell>
-								<Table.TextHeaderCell flexBasis={40}>
-									Mobile Backend
-								</Table.TextHeaderCell>
-								<Table.TextHeaderCell flexBasis={30}>
-									Web Frontend
-								</Table.TextHeaderCell>
-								<Table.TextHeaderCell flexBasis={30}>
-									Web Backend
-								</Table.TextHeaderCell>
-								<Table.TextHeaderCell flexBasis={30}>
-									Database
-								</Table.TextHeaderCell>
-								<Table.TextHeaderCell flexBasis={30}>
-									Infra Stack
-								</Table.TextHeaderCell>
+						
 							</Table.Head>
 							<Table.VirtualBody height={430} estimatedItemSize={100}>
 								{allProjectsJson.edges.map(({node}) => (
@@ -242,51 +164,11 @@ const Projects = ({theme}) => (
 													<Icon icon={type.icon} color="success" marginRight={16} />
 												</Tooltip>
 										)}</Table.TextCell>
-										<Table.TextCell flexBasis={40}>
-											{node.mobileFrontend.trim().length < 11 ? 
-												<Text>{node.mobileFrontend}</Text> : 
-												<Tooltip content={node.mobileFrontend}>
-													<Text>{node.mobileFrontend}</Text>
-												</Tooltip>
-											}											
-										</Table.TextCell>
-										<Table.TextCell flexBasis={40}>
-											{node.mobileBackend.trim().length < 11 ? 
-												<Text>{node.mobileBackend}</Text> : 
-												<Tooltip content={node.mobileBackend}>
-													<Text>{node.mobileBackend}</Text>
-												</Tooltip>
-											}
-										</Table.TextCell>
-										<Table.TextCell flexBasis={30}>
-											{node.websiteFrontend.trim().length < 11 ? 
-												<Text>{node.websiteFrontend}</Text> : 
-												<Tooltip content={node.websiteFrontend}>
-													<Text>{node.websiteFrontend}</Text>
-												</Tooltip>
-											}
-										</Table.TextCell>
-										<Table.TextCell flexBasis={30}>
-											{node.websiteBackend.trim().length < 11 ? 
-												<Text>{node.websiteBackend}</Text> : 
-												<Tooltip content={node.websiteBackend}>
-													<Text>{node.websiteBackend}</Text>
-												</Tooltip>
-											}
-										</Table.TextCell>
-										<Table.TextCell flexBasis={30}>
-											{node.database.trim().length < 11 ? 
-												<Text>{node.database}</Text> : 
-												<Tooltip content={node.database}>
-													<Text>{node.database}</Text>
-												</Tooltip>
-											}											
-										</Table.TextCell>
-										<Table.TextCell flexBasis={30}>
-											{node.infra.trim().length < 11 ? 
-												<Text>{node.infra}</Text> : 
-												<Tooltip content={node.infra}>
-													<Text>{node.infra}</Text>
+										<Table.TextCell flexBasis={70}>
+											{node.techStack && node.techStack.trim().length < 30 ? 
+												<Text>{node.techStack}</Text> : 
+												<Tooltip content={node.techStack}>
+													<Text>{node.techStack}</Text>
 												</Tooltip>
 											}
 										</Table.TextCell>
